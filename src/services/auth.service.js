@@ -4,8 +4,8 @@ const bcrypt = require('bcrypt')
 const msg = require('../helpers/messages')
 
 const authService = {
-    signToken: async (id)=>{
-        return jwt.sign({id}, process.env.JWT_SECRET, {       //para traer el .dev la constante JWT_SECRET y ya no queda expuesta la llave de seguridad de jwt
+    signToken: async (_id)=>{
+        return jwt.sign({_id}, process.env.JWT_SECRET, {       //para traer el .dev la constante JWT_SECRET y ya no queda expuesta la llave de seguridad de jwt
             expiresIn: 60 * 60 * 24
         })
     },
@@ -31,7 +31,7 @@ const authService = {
             let hash = await bcrypt.hash(userData.password, 10).then(res => res)
             userData.password = hash
             await userData.save()
-            let token = await this.signToken(userData.id)
+            let token = await this.signToken(userData._id)
             return {
                 code: 200,
                 token
