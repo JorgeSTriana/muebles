@@ -9,7 +9,7 @@ let msg = {
         error: true,
         msg: 'Error'
     },
-    fieldRequired: {
+    fieldsRequired: {
         code: 400,
         error: true,
         msg: 'Please enter all fields'

@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const msg = require('../helpers/messages')
+const authController = require('../controllers/auth.controller')
+/* const msg = require('../helpers/messages')
 const User = require('../models/user')
-const authService = require('../services/auth.service')
+const authService = require('../services/auth.service') */
 
-router.post('/register', async (req, res)=>{
+/* router.post('/register', async (req, res)=>{
     try {
         const user = new User(req.body)
         const token = await authService.register(user)
@@ -25,6 +26,10 @@ router.post('login', async (req, res)=>{
     } catch (error) {
         res.send(error)
     }
-})
+}) */
+
+/* router.get('/profile', authController.profile) */
+router.post('/register',authController.register)
+router.post('/login', authController.login)
 
 module.exports = router

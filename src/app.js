@@ -6,7 +6,8 @@ const cors = require('cors')
 require('dotenv').config()
 const app = express()
 const authRoutes = require('./routes/auth.routes')
-
+const incomeRoutes = require('./routes/income.routes')
+const outcomeRoutes = require('./routes/outcome.routes')
 
 
 /* configuraciones */
@@ -24,6 +25,8 @@ app.use(express.urlencoded({
 
 //rutas
 app.use('/auth', authRoutes)
+app.use('/incomes', incomeRoutes)
+app.use('/outcomes', outcomeRoutes)
 
 //inicio del servidor
 app.listen(app.get('port'), ()=>{

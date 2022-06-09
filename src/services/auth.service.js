@@ -4,20 +4,29 @@ const bcrypt = require('bcrypt')
 const msg = require('../helpers/messages')
 
 const authService = {
-    signToken: async (_id)=>{
+    async signToken(_id){
+    /* signToken: async (_id)=>{ */
         return jwt.sign({_id}, process.env.JWT_SECRET, {       //para traer el .dev la constante JWT_SECRET y ya no queda expuesta la llave de seguridad de jwt
-            expiresIn: 60 * 60 * 24
+            expiresIn: 60 * 60 * 24 * 7
         })
     },
     login: async function(data){
         try {
             const {email, password} = data
             let userExists = await User.findOne({email:email}, 'name email password').exec()
-            if(await bcrypt.compare(password, userExists.password).then(res=>res)){
+            /* if(await bcrypt.compare(password, userExists.password).then(res=>res)){
                 const token = await this.signToken(userExists.id)
                 return{
                     code: 200,
                     token
+                } */
+            const userF = await bcrypt.compare(password, userExists.password).then(response=>response)
+            if(userF){
+                let token = await authService.signToken(userExists.id)
+                return {
+                    user: userExists,
+                    code: 200,
+                    token: token
                 }
             }else{
                 return msg.authFailed
