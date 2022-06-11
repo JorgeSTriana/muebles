@@ -1,0 +1,51 @@
+.profile{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.infoProfile{
+    width: 30%;
+    margin: 20px;  
+    background: #70706f; 
+}
+.infoProfile h2{
+    text-align: center;
+}
+
+.myObjects{
+    width: 70%;
+    margin: auto;
+}
+.container h2{
+    text-align: center;
+}
+
+/* @media (max-width: 1072px){
+    .profile{
+        flex-direction: column;
+
+    }
+} */
+
+@media (max-width: 992px){
+
+    .profile{
+        /* width: 100%;
+        display: flex; */
+        flex-direction: column;
+    }
+
+    /*.navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+        margin-right: 5px;
+    
+    }*/
+    /* .container{
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    } */
+    } 
+    @media (min-width: 768px){
+        
+    }

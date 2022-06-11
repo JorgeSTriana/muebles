@@ -1,0 +1,214 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+} */
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+ }
+ /* 
+body{ */ 
+    /* background-image: url(/img/fondo-muebles3.jpg) */ /* top center no-repeat */; 
+    /*width: 100%; */
+   /* background: #000;  */
+    /* box-sizing: 100%; */
+
+/* ==================== start header ===================== */
+header{
+    position: fixed;
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+header .logo{
+    height: auto;
+}
+header .logo img{
+    border: 0;
+    padding: 0;
+} 
+header .navbar{
+    height: 112px;
+    padding-top: 0px;
+}
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+/* header .logo i{
+    padding-right: .5rem;
+    color: #e01021;
+} */
+
+header .navbar a:hover {
+    color: #e01021;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 2rem;
+    display: none;          /* ocultamos el menu */
+}
+.form-control{
+    margin-bottom: 0;
+    width: auto;
+}
+.img-container{
+    /* position: absolute; */
+    margin-top: 1em;
+    margin-left: 2%;
+}
+
+.img-profile{
+    clip-path: circle(40%);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.img-profile:hover{
+    clip-path: circle(50%);
+}
+
+.img-profile2{
+    clip-path: circle(40%);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.img-profile2:hover{
+    clip-path: circle(80%);
+}
+/* ======================= nav bootstrap =============== */
+.img-logo{
+    margin-left: 20px;
+}
+.navbar .navbar-brand{
+    margin-left: 20px;
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.form-inline{
+    display: flex;
+    gap: .5rem;
+    justify-content: space-around;
+
+}
+.my-2{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+/* .navbar-dark .navbar-nav{
+    margin-right: 1rem;
+} */
+ .menu-der{
+    align-items: center;
+}
+#search-btn{
+    font-size: 1em;
+    border-radius: 5px;
+}
+#search{
+    margin-bottom: 0;
+    margin-top: 0;
+    width: auto;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+.btn-principales{
+    font-size: 1.5em;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+.btns-principales{
+    width: 50%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-dark .navbar-nav a.nav-link{
+    color: #000;
+    font-size: 1.5rem;
+}
+.containernav {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .mb-2{
+    margin-bottom: 0rem;
+} */
+.b-avatar{
+    background: #fff;
+    /* margin-left: 2rem; */
+}
+ul.navbar-nav{
+    gap: 2rem;
+}
+
+
+.links{
+    font-size: 1.5rem;
+}
+
+
+/* media queries */
+
+@media (min-width: 992px){
+    /*.navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+        margin-right: 5px;
+    
+    }*/
+    /* .container{
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    } */
+    } 
+    @media (min-width: 768px){
+        .page-footer2{
+        justify-content: flex-end;
+        }
+    }

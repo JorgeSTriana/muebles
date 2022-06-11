@@ -1,0 +1,41 @@
+.swap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.swapobject{
+    width: 100%;
+    margin: 20px;   
+}
+.swapobject h2{
+    text-align: center;
+}
+
+.swapobjectofert{
+    width: 100%;
+    margin: 20px;
+}
+.swapobjectofert h2{
+    text-align: center;
+}
+/* img{
+    width: 350px;
+
+} */
+/* @media (max-width: 1072px){
+    .swap{
+        flex-direction: column;
+
+    }
+} */
+
+@media (max-width: 992px){
+    .swap{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px){
+         
+}
